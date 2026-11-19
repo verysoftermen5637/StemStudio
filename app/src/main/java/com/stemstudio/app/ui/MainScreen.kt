@@ -214,8 +214,7 @@ fun MainScreen(viewModel: MainViewModel) {
                 expanded = state.terminalExpanded,
                 onToggle = { viewModel.toggleTerminal() },
                 onCopy = {
-                    clipboard.setText(AnnotatedString(state.logs.joinToString("
-")))
+                    clipboard.setText(AnnotatedString(state.logs.joinToString("\\n")))
                 }
             )
 
